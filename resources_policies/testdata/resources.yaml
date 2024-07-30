@@ -1,0 +1,11 @@
+resources:
+  todo1:
+    kind: todo
+    id: todo-001
+    attr:
+      owner: wim@euri.com
+  todo2:
+    kind: todo
+    id: todo-002
+    attr:
+      owner: jasper@euri.com

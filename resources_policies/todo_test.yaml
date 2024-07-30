@@ -1,0 +1,61 @@
+name: Example test suite
+
+tests:
+  - name: Todo Roles
+    input:
+      principals:
+        - wim
+        - jasper
+        - thomas
+      resources:
+        - todo1
+        - todo2
+      actions:
+        - create
+        - read
+        - update
+        - delete
+
+    expected:
+      - principal: wim
+        resource: todo1
+        actions:
+          delete: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          create: EFFECT_ALLOW
+      - principal: wim
+        resource: todo2
+        actions:
+          delete: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          create: EFFECT_ALLOW
+      - principal: jasper
+        resource: todo1
+        actions:
+          delete: EFFECT_DENY
+          update: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          create: EFFECT_ALLOW
+      - principal: jasper
+        resource: todo2
+        actions:
+          delete: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          create: EFFECT_ALLOW
+      - principal: thomas
+        resource: todo1
+        actions:
+          delete: EFFECT_DENY
+          update: EFFECT_DENY
+          read: EFFECT_ALLOW
+          create: EFFECT_DENY
+      - principal: thomas
+        resource: todo2
+        actions:
+          delete: EFFECT_DENY
+          update: EFFECT_DENY
+          read: EFFECT_ALLOW
+          create: EFFECT_DENY

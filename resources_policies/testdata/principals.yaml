@@ -1,0 +1,19 @@
+principals:
+  wim:
+    id: wim@euri.com
+    roles:
+      - admin
+    attr:
+      name: Wim
+  jasper:
+    id: jasper@euri.com
+    roles:
+      - editor
+    attr:
+      name: Jasper
+  thomas:
+    id: thomas@euri.com
+    roles:
+      - viewer
+    attr:
+      name: Thomas
