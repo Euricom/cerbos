@@ -3,5 +3,3 @@ apiVersion: api.cerbos.cloud/v1
 labels:
   latest:         # 'latest' label pointing to the HEAD of the main branch
     branch: main
-  specificCommit: # 'specificCommit' label pointing a single commit
-    commitHash: aed2f40b9ef115ea3a6eb5273dad56f0ddcffa39
